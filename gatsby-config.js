@@ -1,20 +1,23 @@
+/* eslint no-use-before-define: 0 */
 module.exports = {
   siteMetadata: {
     title: 'Gatsby Default Starter',
+    desc: 'A new blog of mine',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-styled-components',
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `images`,
+        name: 'images',
         path: `${__dirname}/src/images`,
       },
     },
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: 'gatsby-plugin-manifest',
       options: {
         name: 'gatsby-starter-default',
         short_name: 'starter',
@@ -27,4 +30,4 @@ module.exports = {
     },
     'gatsby-plugin-offline',
   ],
-}
+};
